@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Recipe Book</a>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink (click)="onSelect('recipe')">Recipes</a>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink (click)="onSelect('shopping-list')">Shopping List</a>
+    </li>
+    <li ngbDropdown class="nav-item">
+      <a href (click)="(false)" class="nav-link" ngbDropdownToggle>Manage</a>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem>Save Data</button>
+        <button ngbDropdownItem>Fetch Data</button>
+      </div>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-3"></div>
+</div>
