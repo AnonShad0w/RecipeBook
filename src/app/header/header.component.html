@@ -1,13 +1,13 @@
 <div class="container-fluid">
-  <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav">
+  <ul ngbNav #nav="ngbNav" [activeId]="2" class="nav">
     <li [ngbNavItem]="1">
-      <a ngbNavLink>Recipe Book</a>
+      <a ngbNavLink style="cursor: none">Recipe Book</a>
     </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink (click)="onSelect('recipe')">Recipes</a>
+    <li [ngbNavItem]="2" routerLinkActive="active">
+      <a ngbNavLink routerLink="/recipes">Recipes</a>
     </li>
     <li [ngbNavItem]="3">
-      <a ngbNavLink (click)="onSelect('shopping-list')">Shopping List</a>
+      <a ngbNavLink routerLink="/shopping-list">Shopping List</a>
     </li>
     <div class="col text-right">
       <li ngbDropdown class="nav-item d-inline-block">
