@@ -9,13 +9,15 @@
     <li [ngbNavItem]="3">
       <a ngbNavLink (click)="onSelect('shopping-list')">Shopping List</a>
     </li>
-    <li ngbDropdown class="nav-item">
-      <a href (click)="(false)" class="nav-link" ngbDropdownToggle>Manage</a>
-      <div ngbDropdownMenu>
-        <button ngbDropdownItem>Save Data</button>
-        <button ngbDropdownItem>Fetch Data</button>
-      </div>
-    </li>
+    <div class="col text-right">
+      <li ngbDropdown class="nav-item d-inline-block">
+        <a href (click)="(false)" class="nav-link" ngbDropdownToggle>Manage</a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem>Save Data</button>
+          <button ngbDropdownItem>Fetch Data</button>
+        </div>
+      </li>
+    </div>
   </ul>
   <div [ngbNavOutlet]="nav" class="mt-3"></div>
 </div>
