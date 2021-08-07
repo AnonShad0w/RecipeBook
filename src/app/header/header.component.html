@@ -1,23 +1,30 @@
-<div class="container-fluid">
-  <ul ngbNav #nav="ngbNav" [activeId]="2" class="nav">
-    <li [ngbNavItem]="1">
-      <a ngbNavLink style="cursor: none">Recipe Book</a>
-    </li>
-    <li [ngbNavItem]="2" routerLinkActive="active">
-      <a ngbNavLink routerLink="/recipes">Recipes</a>
-    </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink routerLink="/shopping-list">Shopping List</a>
-    </li>
-    <div class="col text-right">
-      <li ngbDropdown class="nav-item d-inline-block">
-        <a href (click)="(false)" class="nav-link" ngbDropdownToggle>Manage</a>
-        <div ngbDropdownMenu>
-          <button ngbDropdownItem>Save Data</button>
-          <button ngbDropdownItem>Fetch Data</button>
-        </div>
-      </li>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Recipe Book</a>
     </div>
-  </ul>
-  <div [ngbNavOutlet]="nav" class="mt-3"></div>
-</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a routerLink="/recipes" routerLinkActive="active">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/shopping-list" routerLinkActive="active"
+            >Shopping List</a
+          >
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" appDropdown>
+          <a class="dropdown-toggle" role="button"
+            >Manage<span class="caret"></span
+          ></a>
+          <ul class="dropdown-menu">
+            <li><a>Save Data</a></li>
+            <li><a>Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

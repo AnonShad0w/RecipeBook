@@ -19,7 +19,7 @@ const routes: Routes = [
     ],
   },
   { path: 'shopping-list', component: ShoppingListComponent },
-  { path: '**', redirectTo: '/', pathMatch: 'full' },
+  { path: '**', redirectTo: '/recipes', pathMatch: 'full' },
 ];
 
 @NgModule({
